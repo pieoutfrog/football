@@ -13,7 +13,7 @@ def post_list(request):
 
 
 def team_list(request):
-    teams = Team.all()
+    teams = Team.objects.all()
     return render(
         request,
         'football/team/list.html',
@@ -22,7 +22,7 @@ def team_list(request):
 
 
 def match_list(request):
-    matches = Match.all()
+    matches = Match.objects.all()
     return render(
         request,
         'football/match/list.html',
